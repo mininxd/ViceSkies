@@ -40,8 +40,8 @@ jobs:
     - name: check Dir
       run: |
        ls -a
-       zip -r lib.zip ./libs
-
+       
+       
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -60,8 +60,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./lib.zip
-          asset_name: lib.zip
+          asset_path: ./libs/armeabi-v7a/libViceSkies.so
+          asset_name: libViceSkies.so
           asset_content_type: application/octet-stream
           
           
