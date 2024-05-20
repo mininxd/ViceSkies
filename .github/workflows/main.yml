@@ -38,6 +38,6 @@ jobs:
         path: ./libs
 
     - name: check Dir
-      run: 
+      run: |
        ls -a
        tree ./
